@@ -18,13 +18,6 @@ body {
     font-size: 65px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: aqua;
-    /*
-    background-image: url("https://img.myloview.com/posters/hello-summer-vector-concept-design-hello-summer-text-in-paper-cut-beach-sand-background-with-elements-like-lifebuoy-beachball-and-palm-tree-for-outdoor-tropical-season-vacation-vector-illustration-700-249072320.jpg");
-    background-clip: text;
-    background-size: cover;
-    -webkit-background-clip: text;
-    color: transparent;
-    */
 } 
 
 h2 {
@@ -52,6 +45,12 @@ h1, h3, h2 {
    align-items: center;
 }
 
+h1, h3 {
+    animation: shake 1s infinite;
+    animation-direction: alternative;
+    animation-timing-function: ease-in-out;
+}
+
  table {
     margin: auto;
     margin-bottom: 30px;
@@ -64,28 +63,35 @@ li.list {
     justify-content: center;
 }
 
-td {
-    width: 80px;
-    height: 140px;
-    background-color: rgb(201, 100, 100);
-    border-radius: 10px;
+td, img {
+    width: 250px;
+    height: 190px;
+    /*background-color: rgb(191, 212, 95);*/
+    border-radius: 30px;
     cursor: pointer;
+}
+
+img:hover {
+    opacity: .8;
+    transition: .6s ease all;
 }
 
 #reset-button {
     display: flex;
     margin: auto;
+    height: 15px;
+    margin-bottom: 30px;
     width: 15%;
-    padding: 35px;
+    padding: 30px;
     color: rgb(124, 12, 12);
-    /*border: none;*/
     font-weight: 700;
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: cyan;
     border-radius: 5px;
     position: relative;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #reset-button:hover {
@@ -93,3 +99,23 @@ td {
         transition: .6s ease all;
         cursor: pointer;
       }
+
+#box-1 {
+    height: 50px;
+}
+
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
